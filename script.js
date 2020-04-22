@@ -1,8 +1,15 @@
 const pi = 3.14;
 let numWaarde;
 let result;
-var d = Date();
-document.getElementById("date").innerText = d;
+var interval = setInterval(time, 1000);
+function time(){
+
+  var d = new Date();
+  document.getElementById("date").innerText = d;
+}
+time();
+
+
 function calculate() {
   numWaarde = document.getElementById("num").value;
   result = pi * numWaarde;
